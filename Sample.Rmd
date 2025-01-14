@@ -1,0 +1,29 @@
+---
+title: "Interactive Map and Plotly Plot"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Introduction
+
+This webpage demonstrates an interactive map using **Leaflet** and a scatter plot using **Plotly**. The map showcases various famous locations around the world, while the plot visualizes a dataset. Both are highly interactive for exploration.
+
+## Interactive Map with Leaflet
+
+Below is an interactive map showcasing markers on various famous locations around the world.
+
+```{r, echo=FALSE}
+# Load necessary libraries
+library(leaflet)
+
+# Create a large interactive map
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap tiles
+  addMarkers(lng = -73.9857, lat = 40.7484, popup = "Empire State Building") %>%  # New York
+  addMarkers(lng = -0.1276, lat = 51.5074, popup = "Big Ben") %>%  # London
+  addMarkers(lng = 2.3522, lat = 48.8566, popup = "Eiffel Tower") %>%  # Paris
+  addMarkers(lng = 139.6917, lat = 35.6895, popup = "Tokyo Tower") %>%  # Tokyo
+  addMarkers(lng = 151.2093, lat = -33.8688, popup = "Sydney Opera House") %>%  # Sydney
+  addMarkers(lng = -74.0060, lat = 40.7128, popup = "Central Park")  # New York
+
