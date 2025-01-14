@@ -1,6 +1,6 @@
 ---
 title: "Interactive Map and Plotly Plot"
-author: "Your Name"
+author: "ARJUN CS"
 date: "`r Sys.Date()`"
 output: html_document
 ---
